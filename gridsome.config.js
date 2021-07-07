@@ -16,11 +16,40 @@ module.exports = {
           //Config options can be added here
         }
       }
-    }
+    },
+    {
+        use: '@gridsome/source-strapi',
+        options: {
+          apiURL: 'http://localhost:1337',
+          queryLimit: 1000, // Defaults to 100
+          contentTypes: ['posts', 'tag'],
+        //   singleTypes: ['impressum'],
+          // Possibility to login with a Strapi user,
+          // when content types are not publicly available (optional).
+        //   loginData: {
+        //     identifier: '',
+        //     password: ''
+        //   }
+        }
+      },
   ],
   transformers: {
     remark: {
       //Config options can be added here
     }
+  },
+  templates: {
+    StrapiPosts: [
+      {
+        path: '/post/:id',
+        component: './src/templates/Post.vue'
+      }
+    ],
+    StrapiTag: [
+      {
+        path: '/tag/:id',
+        component: './src/templates/Tag.vue'
+      }
+    ]
   }
 }

@@ -1,35 +1,40 @@
-const c1 = () => import(/* webpackChunkName: "page--src-pages-post-vue" */ "D:\\GitProgram\\my-gridsome-blog\\src\\pages\\Post.vue")
-const c2 = () => import(/* webpackChunkName: "page--src-pages-contact-vue" */ "D:\\GitProgram\\my-gridsome-blog\\src\\pages\\Contact.vue")
-const c3 = () => import(/* webpackChunkName: "page--src-pages-about-vue" */ "D:\\GitProgram\\my-gridsome-blog\\src\\pages\\About.vue")
-const c4 = () => import(/* webpackChunkName: "page--node-modules-gridsome-app-pages-404-vue" */ "D:\\GitProgram\\my-gridsome-blog\\node_modules\\gridsome\\app\\pages\\404.vue")
-const c5 = () => import(/* webpackChunkName: "page--src-pages-index-vue" */ "D:\\GitProgram\\my-gridsome-blog\\src\\pages\\Index.vue")
+const c1 = () => import(/* webpackChunkName: "page--src-templates-tag-vue" */ "D:\\GitProgram\\my-gridsome-blog\\src\\templates\\Tag.vue")
+const c2 = () => import(/* webpackChunkName: "page--src-templates-post-vue" */ "D:\\GitProgram\\my-gridsome-blog\\src\\templates\\Post.vue")
+const c3 = () => import(/* webpackChunkName: "page--src-pages-contact-vue" */ "D:\\GitProgram\\my-gridsome-blog\\src\\pages\\Contact.vue")
+const c4 = () => import(/* webpackChunkName: "page--src-pages-about-vue" */ "D:\\GitProgram\\my-gridsome-blog\\src\\pages\\About.vue")
+const c5 = () => import(/* webpackChunkName: "page--node-modules-gridsome-app-pages-404-vue" */ "D:\\GitProgram\\my-gridsome-blog\\node_modules\\gridsome\\app\\pages\\404.vue")
+const c6 = () => import(/* webpackChunkName: "page--src-pages-index-vue" */ "D:\\GitProgram\\my-gridsome-blog\\src\\pages\\Index.vue")
 
 export default [
   {
-    path: "/post/",
+    path: "/tag/:id/",
     component: c1
   },
   {
-    path: "/contact/",
+    path: "/post/:id/",
     component: c2
   },
   {
-    path: "/about/",
+    path: "/contact/",
     component: c3
+  },
+  {
+    path: "/about/",
+    component: c4
   },
   {
     name: "404",
     path: "/404/",
-    component: c4
+    component: c5
   },
   {
     name: "home",
-    path: "/",
-    component: c5
+    path: "/:page(\\d+)?/",
+    component: c6
   },
   {
     name: "*",
     path: "*",
-    component: c4
+    component: c5
   }
 ]

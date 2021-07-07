@@ -950,8 +950,8 @@
     "slash" "^2.0.0"
 
 "@gridsome/source-strapi@^0.2.0":
-  "integrity" "sha1-5XQB9/xfHsawRsuDGrymjp1b0Q4="
-  "resolved" "https://registry.nlark.com/@gridsome/source-strapi/download/@gridsome/source-strapi-0.2.0.tgz"
+  "integrity" "sha512-LSPu3am/TqIgW6BCj4DWFbRbaLOR2kpnxM+2RIuL6dWE9h9XMNUFVfUSGuI4WOwwPDJEw2l6QYJJYvtBXBJ7Jw=="
+  "resolved" "https://registry.npmjs.org/@gridsome/source-strapi/-/source-strapi-0.2.0.tgz"
   "version" "0.2.0"
   dependencies:
     "axios" "^0.19.0"
@@ -6088,10 +6088,10 @@
   "resolved" "https://registry.nlark.com/markdown-escapes/download/markdown-escapes-1.0.4.tgz"
   "version" "1.0.4"
 
-"markdown-it@^12.0.6":
-  "integrity" "sha1-rcyOX+Agryksy98WH+hPGWFRYTg="
-  "resolved" "https://registry.npm.taobao.org/markdown-it/download/markdown-it-12.0.6.tgz"
-  "version" "12.0.6"
+"markdown-it@^12.1.0":
+  "integrity" "sha512-7temG6IFOOxfU0SgzhqR+vr2diuMhyO5uUIEZ3C5NbXhqC9uFUHoU41USYuDFoZRsaY7BEIEei874Z20VMLF6A=="
+  "resolved" "https://registry.npmjs.org/markdown-it/-/markdown-it-12.1.0.tgz"
+  "version" "12.1.0"
   dependencies:
     "argparse" "^2.0.1"
     "entities" "~2.1.0"
