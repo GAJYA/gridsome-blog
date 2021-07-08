@@ -29,6 +29,7 @@
               <form>
                 <div class="form-floating">
                   <input
+                    v-model="forms.name"
                     class="form-control"
                     id="inputName"
                     type="text"
@@ -38,6 +39,7 @@
                 </div>
                 <div class="form-floating">
                   <input
+                    v-model="forms.email"
                     class="form-control"
                     id="inputEmail"
                     type="email"
@@ -47,6 +49,7 @@
                 </div>
                 <div class="form-floating">
                   <input
+                    v-model="forms.phone"
                     class="form-control"
                     id="inputPhone"
                     type="tel"
@@ -56,6 +59,7 @@
                 </div>
                 <div class="form-floating">
                   <textarea
+                    v-model="forms.message"
                     class="form-control"
                     id="inputMessage"
                     placeholder="Enter your message here..."
@@ -64,7 +68,11 @@
                   <label for="inputMessage">Message</label>
                 </div>
                 <br />
-                <button class="btn btn-primary text-uppercase" type="submit">
+                <button
+                  class="btn btn-primary text-uppercase"
+                  type="button"
+                  @click="onSubmit"
+                >
                   Send
                 </button>
               </form>
@@ -77,8 +85,32 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "ContactPage",
+  data() {
+    return {
+      forms: {
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      },
+    };
+  },
+  methods: {
+    async onSubmit() {
+      try {
+        await axios.post(this.GRIDSOME_API_URL+"/contacts", this.forms);
+        window.alert("恭喜提交成功");
+        for (const key in this.forms) {
+            this.forms[key] = ''
+        }
+      } catch (error) {
+        window.alert("请求出错，请稍后重试");
+      }
+    },
+  },
 };
 </script>
 

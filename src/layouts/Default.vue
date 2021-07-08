@@ -3,7 +3,7 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
       <div class="container px-4 px-lg-5">
-        <g-link class="navbar-brand" to="/">Start Bootstrap</g-link>
+        <g-link class="navbar-brand" to="/">My Blog</g-link>
         <button
           class="navbar-toggler"
           type="button"
