@@ -7,12 +7,10 @@
     {
       "source": "/uploads/(.*)",
       "destination": "/api/proxy"
-    }
-  ],
-  "routes": [
+    },
     {
-      "src": "/api/(.*)",
-      "dest": "/api/proxy"
+      "source": "/api/(.*)",
+      "destination": "/api/proxy"
     }
   ]
 }
