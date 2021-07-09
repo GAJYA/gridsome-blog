@@ -1,8 +1,18 @@
 {
-    "rewrites": [
-        {
-            "source": "/uploads/:match*",
-            "destination": "http://121.5.240.208:1337/uploads/:match*"
-        }
-    ]
+  "rewrites": [
+    {
+      "source": "/uploads/:match*",
+      "destination": "http://121.5.240.208:1337/uploads/:match*"
+    },
+    {
+      "source": "/uploads/(.*)",
+      "destination": "/api/proxy"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/proxy"
+    }
+  ]
 }

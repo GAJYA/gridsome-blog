@@ -101,7 +101,7 @@ export default {
   methods: {
     async onSubmit() {
       try {
-        await axios.post(this.GRIDSOME_API_URL+"/contacts", this.forms);
+        await axios.post("/api/contacts", this.forms);
         window.alert("恭喜提交成功");
         for (const key in this.forms) {
             this.forms[key] = ''
